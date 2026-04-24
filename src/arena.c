@@ -6,15 +6,6 @@
 
 #include "arena.h"
 
-#define allocate_array(arena, type, count) \
-  (type *)arena_allocate(arena, sizeof(type) * count)
-
-#define allocate_struct(arena, type) \
-  allocate_array(arena, type, 1)
-
-#define allocate_struct_zero(arena, type ) \
-  (type *)arena_allocate_zero(arena, sizeof(type))
-
 struct arena {
   size_t capacity;
   size_t offset;
