@@ -2,6 +2,7 @@
 
 #include <stdint.h>
 #include <stdlib.h>
+#include "common.h"
 
 /*!
  * Type of arena. 'arena_t' is an alias for 'struct arena'
@@ -15,15 +16,6 @@ typedef struct arena arena_t;
  * without needing a seperate scratch arena
  */
 typedef struct arena_save arena_save_t;
-
-typedef int8_t i8;
-typedef int32_t i32 ;
-typedef int64_t i64 ;
-
-typedef uint8_t u8;
-
-typedef float f32;
-typedef double f64;
 
 arena_t arena_make(size_t capacity);
 
